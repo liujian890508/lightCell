@@ -13,5 +13,12 @@
     "jsList" : [
         "src/resource.js",
         "src/app.js"
+        "src/config/GameConfig",
+        "src/config/LayerTag.js",
+        "src/lib/util.js",
+        "src/logic/base.js",
+        "src/logic/main.js",
+        "src/ui/scenes/base.js",
+        "src/ui/scenes/main.js"
     ]
 }
