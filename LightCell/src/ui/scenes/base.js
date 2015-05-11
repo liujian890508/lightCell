@@ -6,6 +6,7 @@ var ui_base = cc.Layer.extend({
     _logic: null,
 
     ctor: function () {
+        this._super();
         this._logic = null;
     },
 

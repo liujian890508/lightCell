@@ -4,9 +4,12 @@
 
 var ui_main = ui_base.extend({
 
-    init: function () {
+    ctor: function () {
         this._super();
+    },
 
+    init: function () {
+        cc.log("main init");
         return true;
     }
 
