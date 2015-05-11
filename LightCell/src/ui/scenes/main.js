@@ -4,18 +4,10 @@
 
 var ui_main = ui_base.extend({
 
-    ctor: function () {
+    init: function () {
         this._super();
 
         return true;
-    },
-
-    onEnter: function(){
-        ui_base.prototype.onEnter.call(this);
-        this.bindBtnListener();
-    },
-
-    bindBtnListener: function () {
-
     }
+
 });

@@ -118,7 +118,6 @@ bool AppDelegate::applicationDidFinishLaunching()
 #if defined(COCOS2D_DEBUG) && (COCOS2D_DEBUG > 0)
     sc->enableDebugger();
 #endif
-    Director::getInstance()->replaceScene(<#cocos2d::Scene *scene#>)
     ScriptEngineProtocol *engine = ScriptingCore::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
     ScriptingCore::getInstance()->runScript("main.js");
