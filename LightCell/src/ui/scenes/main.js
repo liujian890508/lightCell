@@ -9,7 +9,14 @@ var ui_main = ui_base.extend({
     },
 
     init: function () {
-        cc.log("main init");
+
+        var sprite = new cc.Sprite("res/HelloWorld.png");
+        this.addChild(sprite);
+        
+        var size = cc.director.getWinSize();
+        sprite.setPosition(cc.pMult(cc.pFromSize(size), 0.5));
+        sprite.setScale(0.5);
+
         return true;
     }
 

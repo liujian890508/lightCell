@@ -13,8 +13,6 @@ var util = util || {};
 util.replaceScene = function(layerName, data){
     var layer = new window[layerName]();
     var logic = new window[layerName + "_logic"](layer);
-    cc.log(layer);
-    cc.log(logic);
     if( layer && layer.init()){
         if( logic){
             layer.setLogic(logic);
