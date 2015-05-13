@@ -56,7 +56,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
         glview = cocos2d::GLViewImpl::create("LightCell");
 #else
-        glview = cocos2d::GLViewImpl::createWithRect("LightCell", Rect(0,0,960,640));
+        glview = cocos2d::GLViewImpl::createWithRect("LightCell", Rect(0,0,320,480));
 #endif
         director->setOpenGLView(glview);
 }
