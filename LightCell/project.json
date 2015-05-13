@@ -13,11 +13,20 @@
     "jsList" : [
         "src/resource.js",
         "src/app.js",
+
         "src/config/GameConfig.js",
         "src/config/LayerTag.js",
+
+        "src/ui/component/TableView.js",
+        "src/ui/component/TouchLayer.js",
+
         "src/lib/util.js",
+        "src/lib/EventEmitter.js",
+        "src/lib/lib.js",
+
         "src/logic/base.js",
         "src/logic/main.js",
+
         "src/ui/scenes/base.js",
         "src/ui/scenes/main.js"
     ]

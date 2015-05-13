@@ -61,7 +61,8 @@ cc.game.onStart = function(){
     cc.view.resizeWithBrowserSize(true);
     //load resources
     cc.LoaderScene.preload(g_resources, function () {
-        util.replaceScene(LayerTag.main, null);
+        util.setScreenSolutions();
+        util.replaceScene(LayerName.MAIN, null);
     }, this);
 };
 cc.game.run();

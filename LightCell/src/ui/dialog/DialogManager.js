@@ -2,10 +2,10 @@
  * Created by liujian on 15-5-12.
  */
 
-var DialogManager = function () {
-    var _dialog = {};
+var DialogManager = (function () {
+    var _dialogManager = [];
 
-    _dialog.showDialog = function(data, resultCallback){
+    _dialogManager.showDialog = function(data, resultCallback){
         var dialog = new ui_dialogLayer();
         /**
          * -------------------content
@@ -13,4 +13,6 @@ var DialogManager = function () {
         dialog.showDialog();
         return dialog;
     }
-}
+
+    return _dialogManager;
+})();

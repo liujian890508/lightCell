@@ -4,13 +4,23 @@
 
 var ui_main = ui_base.extend({
 
-    ctor: function () {
-        this._super();
-    },
 
     init: function () {
-        cc.log("main init");
+        
+        var sprite = new cc.Sprite("res/HelloWorld.png");
+        this.addChild(sprite);
+        sprite.x = cc.visibleRect.width / 2;
+        sprite.y = cc.visibleRect.height / 2;
+
+        cc.log("------------------------------------------------hello World");
+
+       	this.bindButtonListener();
+
         return true;
+    },
+
+    bindButtonListener: function(){
+
     }
 
 });
