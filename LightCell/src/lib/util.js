@@ -27,33 +27,19 @@ util.replaceScene = function(layerName, data){
 }
 
 util.setScreenSolutions = function(){
-    var frameSize = cc.director.getWinSize();
+    var frameSize = cc.view.getVisibleSize();
+    cc.log("------------------------------------a:" + frameSize.width);
+    cc.log("------------------------------------b:" + frameSize.height);
 
-    var lsSize =  cc.size(960, 640);
-    var scaleX = frameSize.width / lsSize.width;  //
-    var scaleY = frameSize.height / lsSize.height;
+    var lsSize =  cc.size(640, 960);
+    var k1 = frameSize.width / lsSize.width;  //
+    var k2 = frameSize.height / lsSize.height;
 
-    var scale_width =0, scale_height = 0;
+cc.log("----------------------------width:" + lsSize.width * k1);
+cc.log("----------------------------height:" + lsSize.height * k1);
+    cc.view.setDesignResolutionSize(lsSize.width * k1,
+        lsSize.height * k1, cc.ResolutionPolicy.FIXED_WIDTH);
 
-    if (scaleX > scaleY){
-        scale_width = scaleX / (frameSize.height / lsSize.height);
-        scale_height = scaleY / (frameSize.height / lsSize.height);
-
-    }else{
-        scale_width = scaleX / (frameSize.width / lsSize.width);
-        scale_height = scaleY / (frameSize.width / lsSize.width);
-    }
-
-    var scale = Math.max(scale_width, scale_height);
-
-    if(scaleY<1){
-        cc.view.setDesignResolutionSize(lsSize.width * scaleY,
-            lsSize.height, cc.ResolutionPolicy.FIXED_HEIGHT);
-
-    }else{
-        cc.view.setDesignResolutionSize(lsSize.width * scale,
-            lsSize.height * scale, cc.ResolutionPolicy.NO_BORDER);
-    }
 }
 
 util.setTouchFilter = function(flag, zorder){
